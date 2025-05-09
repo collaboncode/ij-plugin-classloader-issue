@@ -1,0 +1,36 @@
+<idea-plugin url="https://com.example.com"
+             xmlns:xi="http://www.w3.org/2001/XInclude"
+             require-restart="false">
+    <id>com.example</id>
+    <name>MinimalExample</name>
+    <version>2023.2.27.1</version>
+    <vendor url="https://exampleplugin.com">ExamplePlugin</vendor>
+    <description>
+        <![CDATA[
+        Minimal Plugin provides a
+        sample to reproduce problem
+      ]]>
+    </description>
+    <idea-version since-build="251.23774" until-build="251.*"/>
+
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.intellij.scala</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+
+        <action id="com.example.actions.HelloWithProgressIndicationActionId"
+                class="com.example.actions.HelloWithProgressIndicationAction">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+
+        <action id="com.example.actions.SimpleHelloActionId"
+                class="com.example.actions.SimpleHelloAction">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+
+    </actions>
+
+</idea-plugin>
